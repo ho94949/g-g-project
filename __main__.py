@@ -1,5 +1,6 @@
 import stage
 import map 
+import sys
 
 import cocos
 from cocos.actions import *
@@ -12,7 +13,7 @@ def main():
 	
 	mapManager = map.MapManager()
 	
-	stageMap = mapManager.load('stage1.map')
+	stageMap = mapManager.load(sys.argv[1])
 	
 	StageFrame = stage.Stage(stageMap)
 	
@@ -22,3 +23,4 @@ def main():
 	
 if __name__ == "__main__":
 	main()
+
